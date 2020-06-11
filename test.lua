@@ -8,7 +8,7 @@ function GlorifiedLeveling.i18n.RegisterPhrase( languageIdentifier, phraseId, te
 end
 
 function GlorifiedLeveling.i18n.RegisterPhrases( languageIdentifier, phraseTbl )
-    for k, v in pairs( phraseTbl ) do -- {niggabyte?}
+    for k, v in pairs( phraseTbl ) do
         GlorifiedLeveling.i18n.RegisterPhrase( languageIdentifier, k, v )
     end
 end
