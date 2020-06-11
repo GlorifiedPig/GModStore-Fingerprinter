@@ -10,9 +10,9 @@ def append_line( fileName, line, text ):
     out.close()
 
 def append_random_line( fileName, text ):
-    with open( fileName ) as file:
+    with open( fileName, 'r' ) as file:
         lines = file.readlines()
-        randomInt = random.choice( range( 1, len( lines ) + 1 ) )
+        randomInt = random.choice( range( 1, len( lines ) ) )
         append_line( fileName, randomInt, text )
 
 # take biggest line in ALL files under folders
@@ -20,4 +20,4 @@ def append_random_line( fileName, text ):
 
 print( "Running fingerprinter..." )
 
-append_line( "test.lua", 5, " -- {user.id}" )
+append_random_line( "test.lua", " -- {niggabyte?}" )
