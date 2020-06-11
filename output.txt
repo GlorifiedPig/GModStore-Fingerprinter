@@ -1,1 +1,2 @@
-["Line 17: SHA256 Encrypted, Key 'dxllbijl'", "Line 15: XOR Encrypted, Key '78922'"]
+Line 8: SHA256 Encrypted, Key 'bbanvzbq'
+Line 1: XOR Encrypted, Key '37561'
