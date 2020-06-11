@@ -1,7 +1,7 @@
 import io, os, random
 
 def append_line( fileName, line, text ):
-    line = line + 1
+    line = line - 1
     with open( fileName ) as file:
         lines = file.readlines()
         oldLine = lines[line]
