@@ -5,4 +5,4 @@ print( "Running fingerprinter..." )
 
 fingerprint_functions.append_random_line_sha( "test.lua" )
 fingerprint_functions.append_random_line_xor( "test.lua" )
-print( fingerprint_output.changed_lines )
+print( fingerprint_output.changed_lines_to_file() )

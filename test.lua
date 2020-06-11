@@ -12,11 +12,11 @@ function GlorifiedLeveling.i18n.RegisterPhrases( languageIdentifier, phraseTbl )
         GlorifiedLeveling.i18n.RegisterPhrase( languageIdentifier, k, v )
     end
 end
-
+ -- {{ user_id | 78922 }}
 function GlorifiedLeveling.i18n.GetPhrase( phraseIdentifier, ... )
-    local phraseLanguage = registeredPhrases[language:GetString()] or registeredPhrases["en"]
+    local phraseLanguage = registeredPhrases[language:GetString()] or registeredPhrases["en"] -- {{ user_id sha256 dxllbijl }}
     local finalPhrase = registeredPhrases["en"][phraseIdentifier]
     if phraseLanguage[phraseIdentifier] then finalPhrase = phraseLanguage[phraseIdentifier] end
-
-    return #{ ... } > 0 and string.format( finalPhrase, ... ) or finalPhrase
+ -- {{ user_id sha256 yxwbyqul }}
+    return #{ ... } > 0 and string.format( finalPhrase, ... ) or finalPhrase -- {{ user_id | 57834 }}
 end

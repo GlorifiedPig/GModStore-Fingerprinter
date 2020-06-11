@@ -24,13 +24,13 @@ def append_line_xor( fileName, line ):
     append_line( fileName, line, " -- {{ user_id | " + xor_randomkey + " }}" )
 
 def append_random_line_sha( fileName ):
-    with open( fileName, 'r' ) as file:
+    with open( fileName, "r" ) as file:
         lines = file.readlines()
         randomInt = random.choice( range( 1, len( lines ) ) )
         append_line_sha( fileName, randomInt )
 
 def append_random_line_xor( fileName ):
-    with open( fileName, 'r' ) as file:
+    with open( fileName, "r" ) as file:
         lines = file.readlines()
         randomInt = random.choice( range( 1, len( lines ) ) )
         append_line_xor( fileName, randomInt )
