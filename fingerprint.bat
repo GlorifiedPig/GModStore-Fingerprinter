@@ -1,4 +1,4 @@
 @ECHO off
 cd %~dp0
-python fingerprint.py
+py -3 fingerprint.py
 pause 5
