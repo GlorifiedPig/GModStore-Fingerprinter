@@ -1,10 +1,13 @@
 
 import io, os, random
 
+changed_lines = []
+
 def append_line( fileName, line, text ):
     line = line - 1
     lines = open( fileName, 'r' ).readlines()
     lines[line] = str( lines[line] )[:-1] + text + "\n"
+    changed_lines.append( "Line " + str( line ) + ": Temporary" )
     out = open( fileName, 'w' )
     out.writelines( lines )
     out.close()
@@ -21,3 +24,4 @@ def append_random_line( fileName, text ):
 print( "Running fingerprinter..." )
 
 append_random_line( "test.lua", " -- {niggabyte?}" )
+print(changed_lines)
