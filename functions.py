@@ -1,4 +1,5 @@
-import io, os, random, string
+
+import io, os, random, string, fingerprint
 
 def randomString( stringLength = 8 ):
     letters = string.ascii_lowercase
@@ -14,12 +15,12 @@ def append_line( fileName, line, text ):
 
 def append_line_sha( fileName, line ):
     sha_randomkey = randomString()
-    
+    fingerprint.changed_lines.append( "Line " + str( line ) + ": SHA256 Encrypted, Key '" + sha_randomkey + "'" )
     append_line( fileName, line, " -- {{ user_id sha256 " + sha_randomkey + " }}" )
 
 def append_line_xor( fileName, line ):
     xor_randomkey = str( random.choice( range( 10, 100000 ) ) )
-    
+    fingerprint.changed_lines.append( "Line " + str( line ) + ": XOR Encrypted, Key '" + xor_randomkey + "'" )
     append_line( fileName, line, " -- {{ user_id | " + xor_randomkey + " }}" )
 
 def append_random_line_sha( fileName ):
