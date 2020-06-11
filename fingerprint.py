@@ -2,14 +2,12 @@
 import io, os, random
 
 def append_line( fileName, line, text ):
-    line = line - 2
-    with open( fileName ) as file:
-        lines = file.readlines()
-        oldLine = lines[line]
-        lines[line] = oldLine + text
-        out = open( fileName, "w" )
-        out.writelines( lines )
-        out.close()
+    line = line - 1
+    lines = open( fileName, 'r' ).readlines()
+    lines[line] = str( lines[line] )[:-1] + text + "\n"
+    out = open( fileName, 'w' )
+    out.writelines( lines )
+    out.close()
 
 def append_random_line( fileName, text ):
     with open( fileName ) as file:
@@ -22,4 +20,4 @@ def append_random_line( fileName, text ):
 
 print( "Running fingerprinter..." )
 
-append_line( "test.lua", 5, "-- {user.id}" )
+append_line( "test.lua", 5, " -- {user.id}" )
