@@ -1,2 +1,3 @@
-Line 8: SHA256 Encrypted, Key 'bbanvzbq'
-Line 1: XOR Encrypted, Key '37561'
+Created 2 fingerprints successfully at 06/14/2020, 19:49:57;
+Line 21: SHA256 Encrypted, Key 'oudqwxqe'
+Line 21: XOR Encrypted, Key '24646'
