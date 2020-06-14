@@ -18,7 +18,7 @@ def changed_lines_to_file():
             string = "Created {0} fingerprints successfully at {1};\n".format( len( changed_lines ), date_time )
             
             for changed_line in changed_lines:
-                string += changed_line + "\n"
+                string += "\n" + changed_line
             
             file.write( string )
             file.close()
@@ -29,7 +29,7 @@ def changed_lines_to_file():
             string = "Created {0} fingerprints successfully at {1};\n".format( len( changed_lines ), date_time )
             
             for changed_line in changed_lines:
-                string += changed_line + "\n"
+                string += "\n" + changed_line
             
             file.write( string )
             file.close()
