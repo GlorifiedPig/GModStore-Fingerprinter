@@ -13,8 +13,8 @@ print("""
                                                            __/ |         | |                              
                                                           |___/          |_|                              
 
-\nMelvin & GlorifiedPig © 2020\n\n""")
-directory = input( "Enter a directory to run the fingerprinter on: " )
+\nMelvin & GlorifiedPig © 2020\n""")
+directory = input( "Enter a directory to run the fingerprinter on:\n" )
 
 files = []
 for r, d, f in os.walk(directory):
