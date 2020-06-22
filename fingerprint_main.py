@@ -17,10 +17,10 @@ print("""
 directory = input( "Enter a directory to run the fingerprinter on:\n" )
 
 files = []
-for r, d, f in os.walk(directory):
+for r, d, f in os.walk( directory ):
     for file in f:
-        if '.lua' in file:
-            files.append(os.path.join(r, file))
+        if ".lua" and not "config" in file:
+            files.append( os.path.join( r, file ) )
 
 for f in files:
     fingerprint_output.changed_lines.append( "Affected file: " + f )
